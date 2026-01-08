@@ -1,0 +1,53 @@
+# AnimAIverse Configuration
+
+animation:
+  resolution: [1920, 1080]
+  fps: 30
+  style: "cinematic"
+  quality: "high"
+
+language:
+  default: "en"  # English is the primary language
+  auto_detect: false
+  fallback_to_default: true
+
+agents:
+  writer:
+    model: "gpt-4"
+    temperature: 0.8
+    max_tokens: 2000
+  
+  director:
+    model: "gpt-4"
+    temperature: 0.7
+    max_tokens: 1500
+  
+  animator:
+    model: "gpt-4"
+    temperature: 0.6
+    max_tokens: 1500
+  
+  scene_composer:
+    model: "gpt-4"
+    temperature: 0.5
+    max_tokens: 1500
+  
+  editor:
+    model: "gpt-4"
+    temperature: 0.5
+    max_tokens: 1500
+
+memory:
+  style_memory_path: "memory/style_memory.json"
+  learning_history_path: "memory/learning_history.json"
+  max_history_size: 1000
+
+workflows:
+  enable_continuous_learning: true
+  auto_save_interval: 300  # seconds
+  max_parallel_agents: 3
+
+output:
+  base_path: "output"
+  save_intermediate: true
+  format: "mp4"
