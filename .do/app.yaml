@@ -1,0 +1,30 @@
+name: animaiverse
+region: nyc
+services:
+  - name: web
+    github:
+      repo: Jayc82/AnimAIverse
+      branch: main
+      deploy_on_push: true
+    run_command: gunicorn app_on_the_go:app --workers=4 --bind=0.0.0.0:8080 --timeout=300
+    environment_slug: python
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    http_port: 8080
+    envs:
+      - key: OPENAI_API_KEY
+        scope: RUN_TIME
+        type: SECRET
+      - key: ANTHROPIC_API_KEY
+        scope: RUN_TIME
+        type: SECRET
+      - key: FLASK_ENV
+        scope: RUN_TIME
+        value: "production"
+    health_check:
+      http_path: /api/health
+      initial_delay_seconds: 10
+      period_seconds: 30
+      timeout_seconds: 10
+      success_threshold: 1
+      failure_threshold: 3

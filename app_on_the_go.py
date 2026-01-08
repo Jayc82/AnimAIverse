@@ -513,6 +513,16 @@ def get_evolution_status():
         }), 500
 
 
+@app.route('/api/health', methods=['GET'])
+def health_check():
+    """Health check endpoint for monitoring and load balancers."""
+    return jsonify({
+        'status': 'healthy',
+        'service': 'AnimAIverse',
+        'version': '1.0.0'
+    }), 200
+
+
 def run_app(host='0.0.0.0', port=5000, debug=False):
     """Run the on-the-go app."""
     print("="*70)

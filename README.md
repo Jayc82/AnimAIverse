@@ -154,6 +154,44 @@ python animai.py
 # - Final edited output
 ```
 
+### On-The-Go Mobile/Web App
+
+```bash
+# Start the mobile web app
+python app_on_the_go.py
+
+# Access from any device at:
+# http://localhost:5000
+
+# Or deploy to cloud (see DEPLOYMENT.md)
+```
+
+## 🚢 Deployment
+
+AnimAIverse can be deployed to any cloud platform. See [DEPLOYMENT.md](DEPLOYMENT.md) for complete deployment guides.
+
+### Quick Deploy Options
+
+**Heroku (Easiest - Free tier available)**
+```bash
+./deploy.sh heroku your-app-name
+```
+
+**Docker**
+```bash
+./deploy.sh docker
+```
+
+**AWS, GCP, Azure, DigitalOcean**
+```bash
+./deploy.sh aws your-app-name
+./deploy.sh gcp
+./deploy.sh azure your-app-name
+./deploy.sh digitalocean
+```
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions for each platform.
+
 ## 📚 Documentation
 
 ### System Architecture
