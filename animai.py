@@ -53,6 +53,13 @@ class AnimAIverse:
         )
         print("✓ Continuous learning initialized")
         
+        # Initialize adaptive learning system - Revolutionary continuously evolving AI
+        from memory.adaptive_learning_system import AdaptiveLearningSystem
+        self.adaptive_learning = AdaptiveLearningSystem(
+            self.config.get("memory", {}).get("adaptive_learning_path", "memory/adaptive_learning.json")
+        )
+        print("✓ Adaptive learning system initialized - Agents continuously evolving")
+        
         # Initialize workflow coordinator
         self.coordinator = WorkflowCoordinator(
             self.config,
@@ -68,6 +75,7 @@ class AnimAIverse:
         print("="*60)
         print("✅ AnimAIverse ready for production!")
         print(f"   Supported languages: {', '.join(self.language_manager.get_supported_languages()[:5])}...")
+        print(f"   🧠 Adaptive Learning: Generation {self.adaptive_learning.adaptive_data['evolution_generation']}")
         print()
     
     def _load_config(self, config_path: str) -> Dict[str, Any]:
@@ -191,11 +199,53 @@ class AnimAIverse:
         # Execute production
         result = self.coordinator.execute_production(production_request)
         
+        # Apply adaptive learning - Continuously evolve agents
+        self._apply_adaptive_learning(result)
+        
         # Save output if requested
         if self.config.get("output", {}).get("save_intermediate", True):
             self._save_production_output(result)
         
         return result
+    
+    def _apply_adaptive_learning(self, production_result: Dict[str, Any]):
+        """Apply adaptive learning to continuously evolve agents."""
+        quality_score = production_result.get("results", {}).get("final_edit", {}).get(
+            "quality_report", {}
+        ).get("metrics", {}).get("overall_score", 0.5)
+        
+        duration = production_result.get("duration_seconds", 0)
+        
+        # Prepare learning data
+        learning_data = {
+            "quality_score": quality_score,
+            "duration": duration,
+            "agent_results": {}
+        }
+        
+        # Extract agent results
+        for agent_name in self.coordinator.agents.keys():
+            agent_result_key = self._get_agent_result_key(agent_name)
+            if agent_result_key in production_result.get("results", {}):
+                learning_data["agent_results"][agent_name] = production_result["results"][agent_result_key]
+        
+        # Apply continuous evolution
+        self.adaptive_learning.learn_from_production(learning_data)
+    
+    def _get_agent_result_key(self, agent_name: str) -> str:
+        """Get result key for agent."""
+        key_map = {
+            "Writer": "script",
+            "Director": "direction",
+            "Animator": "animation",
+            "Graphics": "graphics",
+            "CharacterGenerator": "character_generation",
+            "Voice": "voice",
+            "SpecialEffects": "special_effects",
+            "SceneComposer": "composition",
+            "Editor": "final_edit"
+        }
+        return key_map.get(agent_name, agent_name.lower())
     
     def _save_production_output(self, production: Dict[str, Any]):
         """Save production output to files."""
@@ -210,6 +260,21 @@ class AnimAIverse:
     def get_learning_summary(self) -> Dict[str, Any]:
         """Get learning system summary."""
         return self.coordinator.get_learning_summary()
+    
+    def get_evolution_status(self) -> Dict[str, Any]:
+        """Get adaptive learning evolution status."""
+        return self.adaptive_learning.get_system_evolution_status()
+    
+    def get_agent_capabilities(self, agent_name: str) -> Dict[str, Any]:
+        """Get current capabilities of a specific agent."""
+        return self.adaptive_learning.get_agent_capabilities(agent_name)
+    
+    def get_all_agent_capabilities(self) -> Dict[str, Dict[str, Any]]:
+        """Get capabilities of all agents."""
+        capabilities = {}
+        for agent_name in self.coordinator.agents.keys():
+            capabilities[agent_name] = self.get_agent_capabilities(agent_name)
+        return capabilities
     
     def get_style_recommendations(self, genre: str) -> Dict[str, Any]:
         """Get style recommendations for a genre."""
