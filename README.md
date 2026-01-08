@@ -1,10 +1,25 @@
 # AnimAIverse - The Most Advanced Animation Platform Ever 🎬🚀
 
-The **most revolutionary animation platform ever created** featuring continuously evolving AI agents that learn, adapt, and improve autonomously. Create professional animations anywhere, anytime with our on-the-go mobile app. With 9 specialized AI agents, adaptive learning, and unprecedented capabilities, AnimAIverse is redefining what's possible in AI-powered animation.
+## 🪙 NOW WITH ANIMA TOKEN SYSTEM!
+
+**ANIMA (ANM) - The Bitcoin of Animation**
+*Decentralized Creativity, Powered by AI*
+
+👉 **[See ANIMA Token Documentation](ANIMA_README.md)** 👈
+
+The **most revolutionary animation platform ever created** featuring continuously evolving AI agents that learn, adapt, and improve autonomously. Now powered by the **ANIMA token system** - the world's first token-gated, decentralized AI animation platform with community governance. Create professional animations anywhere, anytime with our on-the-go mobile app. With 9 specialized AI agents, adaptive learning, token economics, and unprecedented capabilities, AnimAIverse is redefining what's possible in AI-powered animation.
 
 ## 🌟 Revolutionary Features
 
-- **🧠 Continuously Evolving AI**: Agents that learn and improve with every production
+- **� ANIMA Token System (NEW!)**: The Bitcoin of Animation
+  - 10M fixed supply with deflationary mechanics
+  - Stake tokens for rewards (5-25% APY)
+  - Tiered access (Basic → Advanced → Pro → Studio)
+  - Community governance & voting
+  - Priority job scheduling
+  - **[Full Token Documentation →](ANIMA_README.md)**
+
+- **�🧠 Continuously Evolving AI**: Agents that learn and improve with every production
   - Real-time adaptive learning system
   - 20+ level progression with XP system
   - Dynamic skill evolution across 8+ skills per agent
@@ -463,6 +478,84 @@ print(recommendations)
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## 🪙 ANIMA Token System
+
+### Quick Start
+
+```bash
+# Setup ANIMA
+./setup_anima.sh
+
+# Run quick demo (2 minutes)
+python quickstart_anima.py
+
+# Run full demo (10 minutes)
+python demo_anima.py
+```
+
+### Key Features
+
+- **10M Fixed Supply**: No inflation, deflationary mechanics
+- **4 Tiers**: Basic (0 ANM) → Advanced (100+) → Pro (1,000+) → Studio (10,000+)
+- **Staking Rewards**: 5-25% APY based on tier
+- **Priority Queue**: Higher stakes = faster rendering
+- **Community Governance**: Vote on features, agents, style packs
+- **Deflationary**: 60% of fees burned, 40% reinvested
+
+### Documentation
+
+- 📘 **[ANIMA User Guide](ANIMA_README.md)** - Getting started, examples, API
+- 🔧 **[Technical Documentation](ANIMA_TECHNICAL.md)** - Architecture, integration
+- 💰 **[Tokenomics Whitepaper](ANIMA_TOKENOMICS.md)** - Economics, simulations
+- 📋 **[Integration Summary](ANIMA_INTEGRATION_SUMMARY.md)** - Implementation details
+
+### Tier Comparison
+
+| Feature | Basic | Advanced | Pro | Studio |
+|---------|-------|----------|-----|--------|
+| Stake Required | 0 | 100 ANM | 1K ANM | 10K ANM |
+| Max Agents | 2 | 5 | 10 | Unlimited |
+| Resolution | 720p | 1080p | 4K | 8K |
+| FPS | 24 | 30 | 60 | 120 |
+| APY | 5% | 10% | 15% | 25% |
+| Priority | 1x | 2x | 5x | 10x |
+
+### Example Usage
+
+```python
+from anima_app import AnimAIverseANIMA
+
+# Initialize with token system
+app = AnimAIverseANIMA()
+
+# Onboard user
+app.onboard_user("alice", initial_tokens=1000.0)
+
+# Stake for tier upgrade
+app.stake_tokens("alice", 500.0)  # Reaches Advanced tier
+
+# Create animation with token-gated features
+result = app.create_animation(
+    user_id="alice",
+    genre="sci-fi",
+    theme="Space adventure",
+    resolution="1080p",  # Advanced tier feature
+    fps=30,
+    duration=5
+)
+
+# Participate in governance
+app.create_proposal(
+    user_id="alice",
+    title="Add Manga Style Pack",
+    description="...",
+    proposal_type="style_pack",
+    proposal_data={...}
+)
+
+app.vote_on_proposal("alice", "PROP-0001", vote_for=True)
+```
+
 ## 📝 License
 
 This project is open source and available under the MIT License.
@@ -471,10 +564,18 @@ This project is open source and available under the MIT License.
 
 Built with advanced AI techniques for next-generation animation production.
 
+Powered by **ANIMA** - The Bitcoin of Animation 🪙
+
 ## 📞 Support
 
 For issues, questions, or feature requests, please open an issue on GitHub.
 
+### ANIMA Support
+- **Documentation**: See [ANIMA_README.md](ANIMA_README.md)
+- **Discord**: [Join Community]
+- **Twitter**: [@ANIMAtoken]
+- **Email**: support@animaverse.ai
+
 ---
 
-**AnimAIverse** - Creating the future of animated storytelling with AI 🚀
+**AnimAIverse + ANIMA** - Creating the future of decentralized animated storytelling with AI 🚀🪙
