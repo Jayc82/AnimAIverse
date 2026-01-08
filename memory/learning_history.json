@@ -9063,6 +9063,1068 @@
         }
       },
       "quality_score": 0.9125
+    },
+    {
+      "timestamp": "2026-01-08T04:34:45.126200",
+      "production_id": "prod_10",
+      "data": {
+        "script": {
+          "script": {
+            "title": "Test Story",
+            "genre": "action",
+            "scenes": [
+              {
+                "scene_number": 1,
+                "location": "Urban rooftop",
+                "time_of_day": "dawn",
+                "description": "High-intensity action sequences with dynamic pacing - Scene 1 of 3",
+                "characters_present": [
+                  "Hero",
+                  "Companion",
+                  "Antagonist"
+                ],
+                "action_beats": [
+                  "Character enters with urgency",
+                  "Obstacle or conflict appears",
+                  "Dynamic action sequence",
+                  "Resolution or escalation"
+                ],
+                "emotional_tone": "establishing",
+                "duration_seconds": 40
+              },
+              {
+                "scene_number": 2,
+                "location": "Underground facility",
+                "time_of_day": "afternoon",
+                "description": "High-intensity action sequences with dynamic pacing - Scene 2 of 3",
+                "characters_present": [
+                  "Hero",
+                  "Companion",
+                  "Antagonist"
+                ],
+                "action_beats": [
+                  "Character enters with urgency",
+                  "Obstacle or conflict appears",
+                  "Dynamic action sequence",
+                  "Resolution or escalation"
+                ],
+                "emotional_tone": "building_tension",
+                "duration_seconds": 40
+              },
+              {
+                "scene_number": 3,
+                "location": "Highway chase",
+                "time_of_day": "midnight",
+                "description": "High-intensity action sequences with dynamic pacing - Scene 3 of 3",
+                "characters_present": [
+                  "Hero",
+                  "Companion",
+                  "Antagonist"
+                ],
+                "action_beats": [
+                  "Character enters with urgency",
+                  "Obstacle or conflict appears",
+                  "Dynamic action sequence",
+                  "Resolution or escalation"
+                ],
+                "emotional_tone": "resolution",
+                "duration_seconds": 40
+              }
+            ],
+            "total_duration": 2,
+            "style_notes": "cinematic"
+          },
+          "character_arcs": {
+            "Hero": {
+              "starting_state": "Establishing character",
+              "development": "Character faces challenges and grows",
+              "resolution": "Character achieves transformation"
+            },
+            "Companion": {
+              "starting_state": "Establishing character",
+              "development": "Character faces challenges and grows",
+              "resolution": "Character achieves transformation"
+            },
+            "Antagonist": {
+              "starting_state": "Establishing character",
+              "development": "Character faces challenges and grows",
+              "resolution": "Character achieves transformation"
+            }
+          },
+          "key_moments": [
+            {
+              "type": "opening",
+              "scene": 1,
+              "description": "Story introduction and setup"
+            },
+            {
+              "type": "midpoint_twist",
+              "scene": 2,
+              "description": "Major plot development"
+            },
+            {
+              "type": "climax_resolution",
+              "scene": 3,
+              "description": "Story climax and resolution"
+            }
+          ],
+          "dialogue": {
+            "Hero": [
+              "Hero: Opening dialogue that establishes character",
+              "Hero: Dialogue advancing the plot",
+              "Hero: Emotional or action-driven dialogue",
+              "Hero: Closing dialogue wrapping up arc"
+            ],
+            "Companion": [
+              "Companion: Opening dialogue that establishes character",
+              "Companion: Dialogue advancing the plot",
+              "Companion: Emotional or action-driven dialogue",
+              "Companion: Closing dialogue wrapping up arc"
+            ],
+            "Antagonist": [
+              "Antagonist: Opening dialogue that establishes character",
+              "Antagonist: Dialogue advancing the plot",
+              "Antagonist: Emotional or action-driven dialogue",
+              "Antagonist: Closing dialogue wrapping up arc"
+            ]
+          },
+          "language": "en",
+          "metadata": {
+            "genre": "action",
+            "theme": "Test",
+            "duration": 2,
+            "language": "en"
+          }
+        },
+        "final_edit": {
+          "final_edit": {
+            "timeline": [
+              {
+                "scene_number": 1,
+                "start_time": 0.0,
+                "end_time": 40.0,
+                "duration": 40,
+                "shots": [
+                  {
+                    "shot_number": 1,
+                    "duration": 10,
+                    "trim_in": 0.0,
+                    "trim_out": 10,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 2,
+                    "duration": 10,
+                    "trim_in": 0.0,
+                    "trim_out": 10,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 3,
+                    "duration": 10,
+                    "trim_in": 0.0,
+                    "trim_out": 10,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening",
+                      "stabilization"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 4,
+                    "duration": 10,
+                    "trim_in": 0.0,
+                    "trim_out": 10,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  }
+                ],
+                "adjustments": {
+                  "speed_ramping": [],
+                  "freeze_frames": [],
+                  "time_remapping": "linear",
+                  "frame_interpolation": true
+                },
+                "color_correction": {
+                  "white_balance": "auto",
+                  "exposure": 0.0,
+                  "contrast": 1.1,
+                  "saturation": 1.05,
+                  "vibrance": 0.1,
+                  "temperature": 0.0,
+                  "tint": 0.0,
+                  "lut": "cinematic_standard"
+                },
+                "sound_markers": [
+                  {
+                    "shot": 1,
+                    "type": "dialogue_sync",
+                    "position": 0
+                  },
+                  {
+                    "shot": 1,
+                    "type": "action_sync",
+                    "position": 5.0
+                  },
+                  {
+                    "shot": 2,
+                    "type": "dialogue_sync",
+                    "position": 10
+                  },
+                  {
+                    "shot": 2,
+                    "type": "action_sync",
+                    "position": 15.0
+                  },
+                  {
+                    "shot": 3,
+                    "type": "dialogue_sync",
+                    "position": 20
+                  },
+                  {
+                    "shot": 3,
+                    "type": "action_sync",
+                    "position": 25.0
+                  },
+                  {
+                    "shot": 4,
+                    "type": "dialogue_sync",
+                    "position": 30
+                  },
+                  {
+                    "shot": 4,
+                    "type": "action_sync",
+                    "position": 35.0
+                  }
+                ]
+              },
+              {
+                "scene_number": 2,
+                "start_time": 40.0,
+                "end_time": 80.0,
+                "duration": 40,
+                "shots": [
+                  {
+                    "shot_number": 5,
+                    "duration": 5,
+                    "trim_in": 0.0,
+                    "trim_out": 5,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 6,
+                    "duration": 5,
+                    "trim_in": 0.0,
+                    "trim_out": 5,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 7,
+                    "duration": 5,
+                    "trim_in": 0.0,
+                    "trim_out": 5,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 8,
+                    "duration": 5,
+                    "trim_in": 0.0,
+                    "trim_out": 5,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 9,
+                    "duration": 5,
+                    "trim_in": 0.0,
+                    "trim_out": 5,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 10,
+                    "duration": 5,
+                    "trim_in": 0.0,
+                    "trim_out": 5,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 11,
+                    "duration": 5,
+                    "trim_in": 0.0,
+                    "trim_out": 5,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  }
+                ],
+                "adjustments": {
+                  "speed_ramping": [],
+                  "freeze_frames": [],
+                  "time_remapping": "linear",
+                  "frame_interpolation": true
+                },
+                "color_correction": {
+                  "white_balance": "auto",
+                  "exposure": 0.0,
+                  "contrast": 1.1,
+                  "saturation": 1.05,
+                  "vibrance": 0.1,
+                  "temperature": 0.0,
+                  "tint": 0.0,
+                  "lut": "cinematic_standard"
+                },
+                "sound_markers": [
+                  {
+                    "shot": 5,
+                    "type": "dialogue_sync",
+                    "position": 0
+                  },
+                  {
+                    "shot": 5,
+                    "type": "action_sync",
+                    "position": 2.5
+                  },
+                  {
+                    "shot": 6,
+                    "type": "dialogue_sync",
+                    "position": 5
+                  },
+                  {
+                    "shot": 6,
+                    "type": "action_sync",
+                    "position": 7.5
+                  },
+                  {
+                    "shot": 7,
+                    "type": "dialogue_sync",
+                    "position": 10
+                  },
+                  {
+                    "shot": 7,
+                    "type": "action_sync",
+                    "position": 12.5
+                  },
+                  {
+                    "shot": 8,
+                    "type": "dialogue_sync",
+                    "position": 15
+                  },
+                  {
+                    "shot": 8,
+                    "type": "action_sync",
+                    "position": 17.5
+                  },
+                  {
+                    "shot": 9,
+                    "type": "dialogue_sync",
+                    "position": 20
+                  },
+                  {
+                    "shot": 9,
+                    "type": "action_sync",
+                    "position": 22.5
+                  },
+                  {
+                    "shot": 10,
+                    "type": "dialogue_sync",
+                    "position": 25
+                  },
+                  {
+                    "shot": 10,
+                    "type": "action_sync",
+                    "position": 27.5
+                  },
+                  {
+                    "shot": 11,
+                    "type": "dialogue_sync",
+                    "position": 30
+                  },
+                  {
+                    "shot": 11,
+                    "type": "action_sync",
+                    "position": 32.5
+                  }
+                ]
+              },
+              {
+                "scene_number": 3,
+                "start_time": 80.0,
+                "end_time": 120.0,
+                "duration": 40,
+                "shots": [
+                  {
+                    "shot_number": 12,
+                    "duration": 6,
+                    "trim_in": 0.0,
+                    "trim_out": 6,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 13,
+                    "duration": 6,
+                    "trim_in": 0.0,
+                    "trim_out": 6,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 14,
+                    "duration": 6,
+                    "trim_in": 0.0,
+                    "trim_out": 6,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 15,
+                    "duration": 6,
+                    "trim_in": 0.0,
+                    "trim_out": 6,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 16,
+                    "duration": 6,
+                    "trim_in": 0.0,
+                    "trim_out": 6,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  },
+                  {
+                    "shot_number": 17,
+                    "duration": 6,
+                    "trim_in": 0.0,
+                    "trim_out": 6,
+                    "speed": 1.0,
+                    "effects": [
+                      "color_correction",
+                      "sharpening"
+                    ],
+                    "stabilization": true,
+                    "noise_reduction": 0.3
+                  }
+                ],
+                "adjustments": {
+                  "speed_ramping": [],
+                  "freeze_frames": [],
+                  "time_remapping": "linear",
+                  "frame_interpolation": true
+                },
+                "color_correction": {
+                  "white_balance": "auto",
+                  "exposure": 0.0,
+                  "contrast": 1.1,
+                  "saturation": 1.05,
+                  "vibrance": 0.1,
+                  "temperature": 0.0,
+                  "tint": 0.0,
+                  "lut": "cinematic_standard"
+                },
+                "sound_markers": [
+                  {
+                    "shot": 12,
+                    "type": "dialogue_sync",
+                    "position": 0
+                  },
+                  {
+                    "shot": 12,
+                    "type": "action_sync",
+                    "position": 3.0
+                  },
+                  {
+                    "shot": 13,
+                    "type": "dialogue_sync",
+                    "position": 6
+                  },
+                  {
+                    "shot": 13,
+                    "type": "action_sync",
+                    "position": 9.0
+                  },
+                  {
+                    "shot": 14,
+                    "type": "dialogue_sync",
+                    "position": 12
+                  },
+                  {
+                    "shot": 14,
+                    "type": "action_sync",
+                    "position": 15.0
+                  },
+                  {
+                    "shot": 15,
+                    "type": "dialogue_sync",
+                    "position": 18
+                  },
+                  {
+                    "shot": 15,
+                    "type": "action_sync",
+                    "position": 21.0
+                  },
+                  {
+                    "shot": 16,
+                    "type": "dialogue_sync",
+                    "position": 24
+                  },
+                  {
+                    "shot": 16,
+                    "type": "action_sync",
+                    "position": 27.0
+                  },
+                  {
+                    "shot": 17,
+                    "type": "dialogue_sync",
+                    "position": 30
+                  },
+                  {
+                    "shot": 17,
+                    "type": "action_sync",
+                    "position": 33.0
+                  }
+                ]
+              }
+            ],
+            "total_duration": 120.0,
+            "format": "1920x1080_30fps",
+            "codec": "h264",
+            "quality": "high"
+          },
+          "transitions": [
+            {
+              "from_scene": 1,
+              "to_scene": 2,
+              "type": "dissolve",
+              "duration": 1.0,
+              "easing": "ease_in_out",
+              "effects": [
+                "motion_blur",
+                "cross_fade"
+              ]
+            },
+            {
+              "from_scene": 2,
+              "to_scene": 3,
+              "type": "dissolve",
+              "duration": 1.0,
+              "easing": "ease_in_out",
+              "effects": [
+                "motion_blur",
+                "cross_fade"
+              ]
+            }
+          ],
+          "audio_guide": {
+            "tracks": {
+              "dialogue": [
+                {
+                  "scene": 1,
+                  "character": "Hero",
+                  "timing": "sync_to_lip_movement",
+                  "volume": 1.0,
+                  "effects": [
+                    "eq",
+                    "compression"
+                  ]
+                },
+                {
+                  "scene": 1,
+                  "character": "Companion",
+                  "timing": "sync_to_lip_movement",
+                  "volume": 1.0,
+                  "effects": [
+                    "eq",
+                    "compression"
+                  ]
+                },
+                {
+                  "scene": 1,
+                  "character": "Antagonist",
+                  "timing": "sync_to_lip_movement",
+                  "volume": 1.0,
+                  "effects": [
+                    "eq",
+                    "compression"
+                  ]
+                },
+                {
+                  "scene": 2,
+                  "character": "Hero",
+                  "timing": "sync_to_lip_movement",
+                  "volume": 1.0,
+                  "effects": [
+                    "eq",
+                    "compression"
+                  ]
+                },
+                {
+                  "scene": 2,
+                  "character": "Companion",
+                  "timing": "sync_to_lip_movement",
+                  "volume": 1.0,
+                  "effects": [
+                    "eq",
+                    "compression"
+                  ]
+                },
+                {
+                  "scene": 2,
+                  "character": "Antagonist",
+                  "timing": "sync_to_lip_movement",
+                  "volume": 1.0,
+                  "effects": [
+                    "eq",
+                    "compression"
+                  ]
+                },
+                {
+                  "scene": 3,
+                  "character": "Hero",
+                  "timing": "sync_to_lip_movement",
+                  "volume": 1.0,
+                  "effects": [
+                    "eq",
+                    "compression"
+                  ]
+                },
+                {
+                  "scene": 3,
+                  "character": "Companion",
+                  "timing": "sync_to_lip_movement",
+                  "volume": 1.0,
+                  "effects": [
+                    "eq",
+                    "compression"
+                  ]
+                },
+                {
+                  "scene": 3,
+                  "character": "Antagonist",
+                  "timing": "sync_to_lip_movement",
+                  "volume": 1.0,
+                  "effects": [
+                    "eq",
+                    "compression"
+                  ]
+                }
+              ],
+              "sound_effects": [
+                {
+                  "scene": 1,
+                  "shot": 1,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 1,
+                  "shot": 1,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 1,
+                  "shot": 2,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 1,
+                  "shot": 2,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 1,
+                  "shot": 3,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 1,
+                  "shot": 3,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 1,
+                  "shot": 4,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 1,
+                  "shot": 4,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 2,
+                  "shot": 5,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 2,
+                  "shot": 5,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 2,
+                  "shot": 6,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 2,
+                  "shot": 6,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 2,
+                  "shot": 7,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 2,
+                  "shot": 7,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 2,
+                  "shot": 8,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 2,
+                  "shot": 8,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 2,
+                  "shot": 9,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 2,
+                  "shot": 9,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 2,
+                  "shot": 10,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 2,
+                  "shot": 10,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 2,
+                  "shot": 11,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 2,
+                  "shot": 11,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 3,
+                  "shot": 12,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 3,
+                  "shot": 12,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 3,
+                  "shot": 13,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 3,
+                  "shot": 13,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 3,
+                  "shot": 14,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 3,
+                  "shot": 14,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 3,
+                  "shot": 15,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 3,
+                  "shot": 15,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 3,
+                  "shot": 16,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 3,
+                  "shot": 16,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                },
+                {
+                  "scene": 3,
+                  "shot": 17,
+                  "type": "ambient",
+                  "timing": "continuous",
+                  "volume": 0.5
+                },
+                {
+                  "scene": 3,
+                  "shot": 17,
+                  "type": "action",
+                  "timing": "on_beat",
+                  "volume": 0.8
+                }
+              ],
+              "music": [
+                {
+                  "tempo": "medium",
+                  "genre": "ambient",
+                  "intensity": "low",
+                  "key": "major",
+                  "scene": 1,
+                  "volume": 0.6
+                },
+                {
+                  "tempo": "medium",
+                  "genre": "suspenseful",
+                  "intensity": "medium",
+                  "key": "minor",
+                  "scene": 2,
+                  "volume": 0.6
+                },
+                {
+                  "tempo": "slow",
+                  "genre": "emotional",
+                  "intensity": "medium",
+                  "key": "major",
+                  "scene": 3,
+                  "volume": 0.6
+                }
+              ],
+              "ambience": [
+                {
+                  "scene": 1,
+                  "type": "traffic",
+                  "volume": 0.3,
+                  "loop": true
+                },
+                {
+                  "scene": 2,
+                  "type": "room_tone",
+                  "volume": 0.3,
+                  "loop": true
+                },
+                {
+                  "scene": 3,
+                  "type": "room_tone",
+                  "volume": 0.3,
+                  "loop": true
+                }
+              ]
+            },
+            "master_volume": 1.0,
+            "normalization": "EBU_R128",
+            "mix_type": "stereo"
+          },
+          "quality_report": {
+            "metrics": {
+              "timing_accuracy": 0.92,
+              "visual_consistency": 0.88,
+              "narrative_flow": 0.9,
+              "technical_quality": 0.95,
+              "overall_score": 0.9125
+            },
+            "passed": true,
+            "issues": [
+              "No major issues detected"
+            ],
+            "recommendations": [
+              "Quality is excellent - ready for final export"
+            ]
+          },
+          "metadata": {
+            "total_duration": 120,
+            "scene_count": 3,
+            "status": "completed"
+          }
+        },
+        "style_context": {},
+        "quality_report": {
+          "metrics": {
+            "timing_accuracy": 0.92,
+            "visual_consistency": 0.88,
+            "narrative_flow": 0.9,
+            "technical_quality": 0.95,
+            "overall_score": 0.9125
+          },
+          "passed": true,
+          "issues": [
+            "No major issues detected"
+          ],
+          "recommendations": [
+            "Quality is excellent - ready for final export"
+          ]
+        }
+      },
+      "quality_score": 0.9125
     }
   ],
   "agent_performance": {
@@ -9132,6 +10194,13 @@
       },
       {
         "timestamp": "2026-01-08T04:31:21.920056",
+        "metrics": {
+          "quality": 0.9,
+          "processing_time": 1.0
+        }
+      },
+      {
+        "timestamp": "2026-01-08T04:34:45.052842",
         "metrics": {
           "quality": 0.9,
           "processing_time": 1.0
@@ -9208,6 +10277,13 @@
           "quality": 0.88,
           "processing_time": 1.2
         }
+      },
+      {
+        "timestamp": "2026-01-08T04:34:45.062803",
+        "metrics": {
+          "quality": 0.88,
+          "processing_time": 1.2
+        }
       }
     ],
     "Animator": [
@@ -9280,6 +10356,13 @@
           "quality": 0.91,
           "processing_time": 1.5
         }
+      },
+      {
+        "timestamp": "2026-01-08T04:34:45.073607",
+        "metrics": {
+          "quality": 0.91,
+          "processing_time": 1.5
+        }
       }
     ],
     "SceneComposer": [
@@ -9341,6 +10424,13 @@
       },
       {
         "timestamp": "2026-01-08T04:31:21.965803",
+        "metrics": {
+          "quality": 0.89,
+          "processing_time": 1.3
+        }
+      },
+      {
+        "timestamp": "2026-01-08T04:34:45.103917",
         "metrics": {
           "quality": 0.89,
           "processing_time": 1.3
@@ -9410,6 +10500,13 @@
           "quality": 0.92,
           "processing_time": 1.1
         }
+      },
+      {
+        "timestamp": "2026-01-08T04:34:45.113834",
+        "metrics": {
+          "quality": 0.92,
+          "processing_time": 1.1
+        }
       }
     ],
     "CharacterGenerator": [
@@ -9436,6 +10533,13 @@
       },
       {
         "timestamp": "2026-01-08T04:31:21.901547",
+        "metrics": {
+          "quality": 0.94,
+          "processing_time": 2.0
+        }
+      },
+      {
+        "timestamp": "2026-01-08T04:34:45.032954",
         "metrics": {
           "quality": 0.94,
           "processing_time": 2.0
@@ -9470,6 +10574,13 @@
           "quality": 0.96,
           "processing_time": 2.5
         }
+      },
+      {
+        "timestamp": "2026-01-08T04:34:45.042894",
+        "metrics": {
+          "quality": 0.96,
+          "processing_time": 2.5
+        }
       }
     ],
     "Voice": [
@@ -9500,6 +10611,13 @@
           "quality": 0.95,
           "processing_time": 1.8
         }
+      },
+      {
+        "timestamp": "2026-01-08T04:34:45.083616",
+        "metrics": {
+          "quality": 0.95,
+          "processing_time": 1.8
+        }
       }
     ],
     "SpecialEffects": [
@@ -9526,6 +10644,13 @@
       },
       {
         "timestamp": "2026-01-08T04:31:21.956566",
+        "metrics": {
+          "quality": 0.93,
+          "processing_time": 2.2
+        }
+      },
+      {
+        "timestamp": "2026-01-08T04:34:45.093531",
         "metrics": {
           "quality": 0.93,
           "processing_time": 2.2
@@ -9596,6 +10721,13 @@
       "agent_count": 9,
       "quality_score": 0.9125,
       "resource_usage": {}
+    },
+    {
+      "timestamp": "2026-01-08T04:34:45.137223",
+      "duration": 0.10729765892028809,
+      "agent_count": 9,
+      "quality_score": 0.9125,
+      "resource_usage": {}
     }
   ],
   "improvement_insights": [
@@ -9606,11 +10738,27 @@
       "message": "Animator showing declining performance",
       "recommendation": "Review Animator configuration and recent outputs",
       "timestamp": "2026-01-08T04:31:21.770124"
+    },
+    {
+      "type": "agent_performance",
+      "severity": "high",
+      "agent": "Director",
+      "message": "Director showing declining performance",
+      "recommendation": "Review Director configuration and recent outputs",
+      "timestamp": "2026-01-08T04:34:45.149071"
+    },
+    {
+      "type": "agent_performance",
+      "severity": "high",
+      "agent": "Voice",
+      "message": "Voice showing declining performance",
+      "recommendation": "Review Voice configuration and recent outputs",
+      "timestamp": "2026-01-08T04:34:45.149076"
     }
   ],
   "metadata": {
     "created": "2026-01-08T02:45:22.057946",
-    "last_updated": "2026-01-08T04:31:22.004322",
-    "total_productions": 9
+    "last_updated": "2026-01-08T04:34:45.149093",
+    "total_productions": 10
   }
 }

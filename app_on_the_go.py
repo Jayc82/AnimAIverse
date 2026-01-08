@@ -401,16 +401,22 @@ def create_animation():
             language=language
         )
         
-        # Extract key metrics
+        # Extract key metrics with safe dictionary access
+        results = result.get('results', {})
+        char_gen = results.get('character_generation', {})
+        voice = results.get('voice', {})
+        effects = results.get('special_effects', {})
+        final_edit = results.get('final_edit', {})
+        
         response_data = {
             'status': 'success',
             'message': 'Animation created successfully',
             'data': {
-                'production_status': result.get('status'),
-                'characters_generated': result['results']['character_generation']['metadata']['total_characters'],
-                'voice_library': result['results']['voice']['metadata']['voice_library_size'],
-                'vfx_count': result['results']['special_effects']['metadata']['vfx_count'],
-                'quality_score': result['results']['final_edit']['quality_report']['metrics']['overall_score'],
+                'production_status': result.get('status', 'unknown'),
+                'characters_generated': char_gen.get('metadata', {}).get('total_characters', 0),
+                'voice_library': voice.get('metadata', {}).get('voice_library_size', 0),
+                'vfx_count': effects.get('metadata', {}).get('vfx_count', 0),
+                'quality_score': final_edit.get('quality_report', {}).get('metrics', {}).get('overall_score', 0.0),
                 'duration_seconds': result.get('duration_seconds', 0)
             }
         }

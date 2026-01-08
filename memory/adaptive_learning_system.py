@@ -1,6 +1,9 @@
 """
 Advanced Adaptive Learning System - Continuously evolving AI agents.
 Implements real-time learning, skill adaptation, and intelligent evolution.
+
+This module requires numpy for optimal performance, but includes fallback
+implementations if numpy is not available.
 """
 import json
 import os
@@ -14,6 +17,13 @@ try:
     HAS_NUMPY = True
 except ImportError:
     HAS_NUMPY = False
+
+# Constants for the adaptive learning system
+XP_PER_QUALITY_POINT = 100  # XP gained per 1.0 quality score
+XP_REQUIRED_PER_LEVEL = 1000  # XP needed to level up
+MAX_AGENT_LEVEL = 20  # Maximum level an agent can reach
+MAX_AGENTS = 9  # Total number of agents in the system
+MAX_MATURITY_PERCENT = 100  # Maximum system maturity percentage
 
 
 class AdaptiveLearningSystem:
@@ -134,12 +144,12 @@ class AdaptiveLearningSystem:
         """Evolve a specific agent's capabilities."""
         agent_data = self.adaptive_data["agent_evolution"][agent_name]
         
-        # Award experience points
-        xp_gain = int(quality_score * 100)
+        # Award experience points based on quality
+        xp_gain = int(quality_score * XP_PER_QUALITY_POINT)
         agent_data["experience_points"] += xp_gain
         
         # Level up check
-        xp_needed = agent_data["current_level"] * 1000
+        xp_needed = agent_data["current_level"] * XP_REQUIRED_PER_LEVEL
         if agent_data["experience_points"] >= xp_needed:
             agent_data["current_level"] += 1
             agent_data["experience_points"] = 0
@@ -248,11 +258,14 @@ class AdaptiveLearningSystem:
                     avg_skills[skill] = []
                 avg_skills[skill].append(value)
         
-        # Calculate mean
+        # Calculate mean with safety check
         if HAS_NUMPY:
             avg_skills = {skill: np.mean(values) for skill, values in avg_skills.items()}
         else:
-            avg_skills = {skill: sum(values) / len(values) for skill, values in avg_skills.items()}
+            avg_skills = {
+                skill: (sum(values) / len(values) if len(values) > 0 else 0.0)
+                for skill, values in avg_skills.items()
+            }
         
         return {
             "total_system_level": total_level,
@@ -260,7 +273,7 @@ class AdaptiveLearningSystem:
             "total_evolutions": self.adaptive_data["metadata"]["total_evolutions"],
             "average_skills": avg_skills,
             "learning_rate": self.adaptive_data["learning_rate"],
-            "system_maturity": min(100, (total_level / 180) * 100)  # 9 agents * 20 levels
+            "system_maturity": min(MAX_MATURITY_PERCENT, (total_level / (MAX_AGENTS * MAX_AGENT_LEVEL)) * MAX_MATURITY_PERCENT)
         }
     
     def _save_adaptive_data(self):
