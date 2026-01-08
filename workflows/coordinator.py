@@ -107,7 +107,8 @@ class WorkflowCoordinator:
             # Stage 8: Scene Composer Agent
             print("\n🖼️  Stage 8/9: Scene Composition (Scene Composer Agent)")
             composition_result = self._execute_composer_stage(
-                script_result, direction_result, animation_result, style_context
+                script_result, direction_result, animation_result, 
+                graphics_result, voice_result, vfx_result, style_context
             )
             self.current_production["results"]["composition"] = composition_result
             print("   ✓ Scenes composed")
@@ -115,7 +116,8 @@ class WorkflowCoordinator:
             # Stage 9: Editor Agent
             print("\n✂️  Stage 9/9: Final Editing (Editor Agent)")
             final_result = self._execute_editor_stage(
-                composition_result, animation_result, style_context
+                composition_result, animation_result, voice_result, 
+                vfx_result, style_context
             )
             self.current_production["results"]["final_edit"] = final_result
             print("   ✓ Final edit completed")
@@ -242,8 +244,11 @@ class WorkflowCoordinator:
     def _execute_composer_stage(self, script_result: Dict[str, Any],
                                 direction_result: Dict[str, Any],
                                 animation_result: Dict[str, Any],
+                                graphics_result: Dict[str, Any],
+                                voice_result: Dict[str, Any],
+                                vfx_result: Dict[str, Any],
                                 style_context: Dict[str, Any]) -> Dict[str, Any]:
-        """Execute scene composer agent stage."""
+        """Execute scene composer agent stage with all production elements."""
         if "SceneComposer" not in self.agents:
             raise ValueError("SceneComposer agent not registered")
         
@@ -253,6 +258,9 @@ class WorkflowCoordinator:
             "script": script_result.get("script", {}),
             "shot_list": direction_result.get("shot_list", []),
             "character_animations": animation_result.get("character_animations", []),
+            "graphics": graphics_result.get("character_designs", []),
+            "voice_profiles": voice_result.get("voice_assignments", []),
+            "visual_effects": vfx_result.get("visual_effects", []),
             "style_context": style_context
         }
         
@@ -268,8 +276,10 @@ class WorkflowCoordinator:
     
     def _execute_editor_stage(self, composition_result: Dict[str, Any],
                              animation_result: Dict[str, Any],
+                             voice_result: Dict[str, Any],
+                             vfx_result: Dict[str, Any],
                              style_context: Dict[str, Any]) -> Dict[str, Any]:
-        """Execute editor agent stage."""
+        """Execute editor agent stage with complete production data."""
         if "Editor" not in self.agents:
             raise ValueError("Editor agent not registered")
         
@@ -278,6 +288,9 @@ class WorkflowCoordinator:
         editor_input = {
             "composed_scenes": composition_result.get("composed_scenes", []),
             "timing_charts": animation_result.get("timing_charts", []),
+            "audio_guide": voice_result.get("voice_direction", []),
+            "music_score": vfx_result.get("music_score", {}),
+            "sound_design": vfx_result.get("sound_design", []),
             "style_context": style_context
         }
         
