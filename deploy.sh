@@ -118,9 +118,13 @@ case $PLATFORM in
     az webapp create --resource-group ${APP_NAME}RG --plan ${APP_NAME}Plan --name $APP_NAME --runtime "PYTHON:3.11"
     
     # Set environment variables
-    if [ ! -z "$OPENAI_API_KEY" ] && [ ! -z "$ANTHROPIC_API_KEY" ]; then
+    if [ ! -z "$OPENAI_API_KEY" ]; then
         az webapp config appsettings set --resource-group ${APP_NAME}RG --name $APP_NAME \
-            --settings OPENAI_API_KEY=$OPENAI_API_KEY ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
+            --settings OPENAI_API_KEY=$OPENAI_API_KEY
+    fi
+    if [ ! -z "$ANTHROPIC_API_KEY" ]; then
+        az webapp config appsettings set --resource-group ${APP_NAME}RG --name $APP_NAME \
+            --settings ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
     fi
     
     # Deploy

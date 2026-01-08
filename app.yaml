@@ -3,8 +3,11 @@ runtime: python311
 entrypoint: gunicorn -b :$PORT app_on_the_go:app --workers=4 --timeout=300
 
 env_variables:
-  OPENAI_API_KEY: "your_openai_key_here"
-  ANTHROPIC_API_KEY: "your_anthropic_key_here"
+  # IMPORTANT: Do not hardcode API keys here!
+  # Set these via environment variables or GCP Secret Manager:
+  # gcloud secrets create openai-key --data-file=-
+  # gcloud secrets create anthropic-key --data-file=-
+  # Then reference them in your deployment
   FLASK_ENV: "production"
 
 instance_class: F2
