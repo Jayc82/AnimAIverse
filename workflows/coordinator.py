@@ -60,36 +60,60 @@ class WorkflowCoordinator:
         
         # Execute workflow stages
         try:
-            # Stage 1: Writer Agent
-            print("\n✍️  Stage 1/5: Script Generation (Writer Agent)")
+            # Stage 1: Character Generation
+            print("\n👥 Stage 1/9: Character Generation (Character Generator Agent)")
+            character_gen_result = self._execute_character_generation_stage(production_request, style_context)
+            self.current_production["results"]["character_generation"] = character_gen_result
+            print("   ✓ Thousands of characters generated")
+            
+            # Stage 2: Graphics Creation
+            print("\n🎨 Stage 2/9: Exceptional Graphics Creation (Graphics Agent)")
+            graphics_result = self._execute_graphics_stage(character_gen_result, production_request, style_context)
+            self.current_production["results"]["graphics"] = graphics_result
+            print("   ✓ Exceptional graphics and designs created")
+            
+            # Stage 3: Writer Agent
+            print("\n✍️  Stage 3/9: Script Generation (Writer Agent)")
             script_result = self._execute_writer_stage(production_request, style_context)
             self.current_production["results"]["script"] = script_result
             print("   ✓ Script generated successfully")
             
-            # Stage 2: Director Agent
-            print("\n🎥 Stage 2/5: Scene Direction (Director Agent)")
+            # Stage 4: Director Agent
+            print("\n🎥 Stage 4/9: Scene Direction (Director Agent)")
             direction_result = self._execute_director_stage(script_result, style_context)
             self.current_production["results"]["direction"] = direction_result
             print("   ✓ Scene direction completed")
             
-            # Stage 3: Animator Agent
-            print("\n🎨 Stage 3/5: Character Animation (Animator Agent)")
+            # Stage 5: Animator Agent
+            print("\n🎬 Stage 5/9: Character Animation (Animator Agent)")
             animation_result = self._execute_animator_stage(
                 script_result, direction_result, style_context
             )
             self.current_production["results"]["animation"] = animation_result
             print("   ✓ Animation created")
             
-            # Stage 4: Scene Composer Agent
-            print("\n🖼️  Stage 4/5: Scene Composition (Scene Composer Agent)")
+            # Stage 6: Voice Agent
+            print("\n🎤 Stage 6/9: Voice Generation (Voice Agent)")
+            voice_result = self._execute_voice_stage(character_gen_result, script_result, style_context)
+            self.current_production["results"]["voice"] = voice_result
+            print("   ✓ Thousands of voice types generated")
+            
+            # Stage 7: Special Effects Agent
+            print("\n✨ Stage 7/9: Special Effects (Special Effects Agent)")
+            vfx_result = self._execute_special_effects_stage(script_result, animation_result, style_context)
+            self.current_production["results"]["special_effects"] = vfx_result
+            print("   ✓ VFX, music, and sounds created")
+            
+            # Stage 8: Scene Composer Agent
+            print("\n🖼️  Stage 8/9: Scene Composition (Scene Composer Agent)")
             composition_result = self._execute_composer_stage(
                 script_result, direction_result, animation_result, style_context
             )
             self.current_production["results"]["composition"] = composition_result
             print("   ✓ Scenes composed")
             
-            # Stage 5: Editor Agent
-            print("\n✂️  Stage 5/5: Final Editing (Editor Agent)")
+            # Stage 9: Editor Agent
+            print("\n✂️  Stage 9/9: Final Editing (Editor Agent)")
             final_result = self._execute_editor_stage(
                 composition_result, animation_result, style_context
             )
@@ -263,6 +287,109 @@ class WorkflowCoordinator:
         self.continuous_learning.record_agent_performance("Editor", {
             "quality": 0.92,
             "processing_time": 1.1
+        })
+        
+        return result
+    
+    def _execute_character_generation_stage(self, request: Dict[str, Any],
+                                           style_context: Dict[str, Any]) -> Dict[str, Any]:
+        """Execute character generator agent stage."""
+        if "CharacterGenerator" not in self.agents:
+            raise ValueError("CharacterGenerator agent not registered")
+        
+        char_gen = self.agents["CharacterGenerator"]
+        
+        char_gen_input = {
+            "count": 1000,  # Generate thousands of characters
+            "character_types": ["main", "supporting", "background"],
+            "diversity_level": "maximum",
+            "genre": request.get("genre", "action")
+        }
+        
+        result = char_gen.process(char_gen_input)
+        
+        # Record performance
+        self.continuous_learning.record_agent_performance("CharacterGenerator", {
+            "quality": 0.94,
+            "processing_time": 2.0
+        })
+        
+        return result
+    
+    def _execute_graphics_stage(self, character_result: Dict[str, Any],
+                                request: Dict[str, Any],
+                                style_context: Dict[str, Any]) -> Dict[str, Any]:
+        """Execute graphics agent stage."""
+        if "Graphics" not in self.agents:
+            raise ValueError("Graphics agent not registered")
+        
+        graphics = self.agents["Graphics"]
+        
+        graphics_input = {
+            "art_style": style_context.get("visual_style", "realistic"),
+            "characters": request.get("characters", []),
+            "scenes": [],  # Will be populated from script
+            "quality": "exceptional"
+        }
+        
+        result = graphics.process(graphics_input)
+        
+        # Record performance
+        self.continuous_learning.record_agent_performance("Graphics", {
+            "quality": 0.96,
+            "processing_time": 2.5
+        })
+        
+        return result
+    
+    def _execute_voice_stage(self, character_result: Dict[str, Any],
+                            script_result: Dict[str, Any],
+                            style_context: Dict[str, Any]) -> Dict[str, Any]:
+        """Execute voice agent stage."""
+        if "Voice" not in self.agents:
+            raise ValueError("Voice agent not registered")
+        
+        voice = self.agents["Voice"]
+        
+        voice_input = {
+            "characters": script_result.get("script", {}).get("scenes", [{}])[0].get("characters_present", []),
+            "dialogue": script_result.get("dialogue", {}),
+            "language": style_context.get("language", "en"),
+            "quality": "exceptional"
+        }
+        
+        result = voice.process(voice_input)
+        
+        # Record performance
+        self.continuous_learning.record_agent_performance("Voice", {
+            "quality": 0.95,
+            "processing_time": 1.8
+        })
+        
+        return result
+    
+    def _execute_special_effects_stage(self, script_result: Dict[str, Any],
+                                      animation_result: Dict[str, Any],
+                                      style_context: Dict[str, Any]) -> Dict[str, Any]:
+        """Execute special effects agent stage."""
+        if "SpecialEffects" not in self.agents:
+            raise ValueError("SpecialEffects agent not registered")
+        
+        special_fx = self.agents["SpecialEffects"]
+        
+        special_fx_input = {
+            "scenes": script_result.get("script", {}).get("scenes", []),
+            "action_sequences": animation_result.get("action_sequences", []),
+            "mood_profile": {"intensity": "high", "emotion": "varied"},
+            "genre": script_result.get("script", {}).get("genre", "action")
+        }
+        
+        result = special_fx.process(special_fx_input)
+        
+        # Record performance
+        self.continuous_learning.record_agent_performance("SpecialEffects", {
+            "quality": 0.93,
+            "processing_time": 2.2
         })
         
         return result

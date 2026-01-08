@@ -16,6 +16,10 @@ from agents.director_agent import DirectorAgent
 from agents.animator_agent import AnimatorAgent
 from agents.scene_composer_agent import SceneComposerAgent
 from agents.editor_agent import EditorAgent
+from agents.graphics_agent import GraphicsAgent
+from agents.character_generator_agent import CharacterGeneratorAgent
+from agents.voice_agent import VoiceAgent
+from agents.special_effects_agent import SpecialEffectsAgent
 from memory.style_memory import StyleMemory
 from memory.continuous_learning import ContinuousLearning
 from workflows.coordinator import WorkflowCoordinator
@@ -108,15 +112,21 @@ class AnimAIverse:
         }
     
     def _initialize_agents(self):
-        """Initialize all specialized agents."""
+        """Initialize all specialized agents including new advanced agents."""
         agent_configs = self.config.get("agents", {})
         
-        # Create agents
+        # Create core agents
         writer = WriterAgent(agent_configs.get("writer", {}))
         director = DirectorAgent(agent_configs.get("director", {}))
         animator = AnimatorAgent(agent_configs.get("animator", {}))
         composer = SceneComposerAgent(agent_configs.get("scene_composer", {}))
         editor = EditorAgent(agent_configs.get("editor", {}))
+        
+        # Create new advanced agents
+        graphics = GraphicsAgent(agent_configs.get("graphics", {}))
+        character_gen = CharacterGeneratorAgent(agent_configs.get("character_generator", {}))
+        voice = VoiceAgent(agent_configs.get("voice", {}))
+        special_fx = SpecialEffectsAgent(agent_configs.get("special_effects", {}))
         
         # Register with coordinator
         self.coordinator.register_agent("Writer", writer)
@@ -124,6 +134,12 @@ class AnimAIverse:
         self.coordinator.register_agent("Animator", animator)
         self.coordinator.register_agent("SceneComposer", composer)
         self.coordinator.register_agent("Editor", editor)
+        
+        # Register new advanced agents
+        self.coordinator.register_agent("Graphics", graphics)
+        self.coordinator.register_agent("CharacterGenerator", character_gen)
+        self.coordinator.register_agent("Voice", voice)
+        self.coordinator.register_agent("SpecialEffects", special_fx)
     
     def create_animation(self, 
                         genre: str = "action",
