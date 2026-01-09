@@ -359,6 +359,7 @@ class StakingSystem:
                 "staked": 0,
                 "tier": StakingTier.BASIC.value,
                 "pending_rewards": 0,
+                "total_rewards_earned": 0,
                 "apy": self.APY_RATES[StakingTier.BASIC] * 100,
                 "features": self.TIER_FEATURES[StakingTier.BASIC],
                 "priority_score": 1.0

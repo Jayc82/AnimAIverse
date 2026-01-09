@@ -133,74 +133,47 @@ class AnimAIverseANIMA:
         
         # Character Generator Agent
         if agents_config.get("character_generator", {}).get("enabled", True):
-            char_gen_agent = CharacterGeneratorAgent(
-                "CharacterGenerator",
-                self.config
-            )
+            char_gen_agent = CharacterGeneratorAgent(self.config)
             self.base_coordinator.register_agent("CharacterGenerator", char_gen_agent)
         
         # Graphics Agent
         if agents_config.get("graphics", {}).get("enabled", True):
-            graphics_agent = GraphicsAgent(
-                "Graphics",
-                self.config
-            )
+            graphics_agent = GraphicsAgent(self.config)
             self.base_coordinator.register_agent("Graphics", graphics_agent)
         
         # Writer Agent
         if agents_config.get("writer", {}).get("enabled", True):
-            writer_agent = WriterAgent(
-                "Writer",
-                self.config
-            )
+            writer_agent = WriterAgent(self.config)
             self.base_coordinator.register_agent("Writer", writer_agent)
         
         # Director Agent
         if agents_config.get("director", {}).get("enabled", True):
-            director_agent = DirectorAgent(
-                "Director",
-                self.config
-            )
+            director_agent = DirectorAgent(self.config)
             self.base_coordinator.register_agent("Director", director_agent)
         
         # Animator Agent
         if agents_config.get("animator", {}).get("enabled", True):
-            animator_agent = AnimatorAgent(
-                "Animator",
-                self.config
-            )
+            animator_agent = AnimatorAgent(self.config)
             self.base_coordinator.register_agent("Animator", animator_agent)
         
         # Voice Agent
         if agents_config.get("voice", {}).get("enabled", True):
-            voice_agent = VoiceAgent(
-                "Voice",
-                self.config
-            )
+            voice_agent = VoiceAgent(self.config)
             self.base_coordinator.register_agent("Voice", voice_agent)
         
         # Special Effects Agent
         if agents_config.get("special_effects", {}).get("enabled", True):
-            vfx_agent = SpecialEffectsAgent(
-                "SpecialEffects",
-                self.config
-            )
+            vfx_agent = SpecialEffectsAgent(self.config)
             self.base_coordinator.register_agent("SpecialEffects", vfx_agent)
         
         # Scene Composer Agent
         if agents_config.get("scene_composer", {}).get("enabled", True):
-            composer_agent = SceneComposerAgent(
-                "SceneComposer",
-                self.config
-            )
+            composer_agent = SceneComposerAgent(self.config)
             self.base_coordinator.register_agent("SceneComposer", composer_agent)
         
         # Editor Agent
         if agents_config.get("editor", {}).get("enabled", True):
-            editor_agent = EditorAgent(
-                "Editor",
-                self.config
-            )
+            editor_agent = EditorAgent(self.config)
             self.base_coordinator.register_agent("Editor", editor_agent)
     
     # ==================== USER ONBOARDING ====================

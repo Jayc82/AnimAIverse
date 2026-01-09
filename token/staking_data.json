@@ -1,0 +1,21 @@
+{
+  "stakes": {
+    "demo_user": {
+      "amount": 500.0,
+      "start_time": "2026-01-09T10:22:06.718765",
+      "last_reward_claim": "2026-01-09T10:22:06.718771",
+      "total_rewards_earned": 0,
+      "staking_history": [
+        {
+          "timestamp": "2026-01-09T10:22:06.719265",
+          "action": "stake",
+          "amount": 500.0,
+          "total_staked": 500.0
+        }
+      ]
+    }
+  },
+  "total_staked": 500.0,
+  "staking_pool_rewards": 0,
+  "reward_history": []
+}

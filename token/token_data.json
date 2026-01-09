@@ -1,0 +1,49 @@
+{
+  "token_info": {
+    "name": "ANIMA",
+    "symbol": "ANM",
+    "total_supply": 10000000,
+    "circulating_supply": 5000000,
+    "burned_supply": 0,
+    "decimals": 8,
+    "launch_date": "2026-01-09T10:21:25.251436"
+  },
+  "allocations": {
+    "community": 5000000,
+    "team": 2000000,
+    "ecosystem": 1500000,
+    "reserve": 1000000,
+    "marketing": 500000
+  },
+  "balances": {
+    "demo_user": 1500.0,
+    "staking_pool": 500.0
+  },
+  "transactions": [
+    {
+      "timestamp": "2026-01-09T10:21:25.252038",
+      "type": "mint",
+      "user": "demo_user",
+      "amount": 1000.0,
+      "reason": "user_onboarding"
+    },
+    {
+      "timestamp": "2026-01-09T10:22:06.717956",
+      "type": "mint",
+      "user": "demo_user",
+      "amount": 1000.0,
+      "reason": "user_onboarding"
+    },
+    {
+      "timestamp": "2026-01-09T10:22:06.718777",
+      "type": "transfer",
+      "from": "demo_user",
+      "to": "staking_pool",
+      "amount": 500.0
+    }
+  ],
+  "total_fees_collected": 0,
+  "total_burned": 0,
+  "total_reinvested": 0,
+  "treasury": 1000000
+}
